@@ -65,8 +65,9 @@ func autoCleanupTransactionRecords() {
 // 定期重置速率限制暫存器以及權重限制暫存器
 func init() {
 	go resetReg()
+}
 
-    func resetReg() {
+func resetReg() {
 	startWeightTime = time.Now()
 	startRateLimitTime = time.Now()
 
@@ -88,7 +89,6 @@ func init() {
 			}
 		}
 	}
-}
 }
 ```
 
